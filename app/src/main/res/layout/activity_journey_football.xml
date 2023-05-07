@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JourneyFootball">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#D5D5D5"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60ssp"
+            android:background="#FF7701"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/backbtn1"
+                android:background="#FF7701"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10ssp"
+                android:layout_marginRight="@dimen/_10ssp"
+                android:src="@drawable/vector"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="JOURNEY"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_55sdp"
+                />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#2C323E"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/journeyone"
+                    android:layout_gravity="center"
+
+                    />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="@dimen/_14sdp"
+                              android:text="The football ball had been manufactured in a factory in Pakistan, where skilled workers had carefully sewn together the panels of leather and added the rubber bladder inside. From there, the ball had been shipped across the world, passing through customs and border checkpoints, changing hands between truck drivers, cargo handlers, and delivery agents.
+\n \nFinally, the ball arrived at its destination, a small village in rural Africa, where a group of boys were waiting eagerly to play with it. They had never seen a real football ball before, only makeshift ones made from old socks and plastic bags.
+"
+                            android:layout_margin="30dp"/>
+                    </LinearLayout>
+                </ScrollView>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>
