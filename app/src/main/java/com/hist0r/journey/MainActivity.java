@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class MainActivity extends AppCompatActivity {
     Button JourneyfootballBtn, SecretBtn;
 
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,JourneyFootball.class));
+                Animatoo.INSTANCE.animateInAndOut(MainActivity.this);
+                finish();
             }
         });
 
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,FootballSecret.class));
+                Animatoo.INSTANCE.animateCard(MainActivity.this);
+                finish();
             }
         });
     }

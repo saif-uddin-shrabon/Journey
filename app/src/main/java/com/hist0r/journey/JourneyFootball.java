@@ -1,11 +1,14 @@
 package com.hist0r.journey;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class JourneyFootball extends AppCompatActivity {
 
@@ -21,8 +24,20 @@ public class JourneyFootball extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(JourneyFootball.this,MainActivity.class));
+                Animatoo.INSTANCE.animateSlideLeft(JourneyFootball.this);
                 finish();
             }
         });
+        JourneyFootball.this.getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+
+                startActivity(new Intent(JourneyFootball.this,MainActivity.class));
+                Animatoo.INSTANCE.animateSlideRight(JourneyFootball.this);
+                finish();
+
+            }
+        });
+
     }
 }
